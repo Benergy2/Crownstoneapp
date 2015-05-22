@@ -1,0 +1,26 @@
+{
+    "com.randdusing.bluetoothle": {
+        "source": {
+            "type": "registry",
+            "id": "com.randdusing.bluetoothle"
+        }
+    },
+    "org.apache.cordova.device": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.device"
+        }
+    },
+    "org.apache.cordova.dialogs": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.dialogs"
+        }
+    },
+    "com.verso.cordova.clipboard": {
+        "source": {
+            "type": "registry",
+            "id": "com.verso.cordova.clipboard"
+        }
+    }
+}
