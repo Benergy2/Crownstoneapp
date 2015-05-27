@@ -1,0 +1,12 @@
+
+    cordova build android
+
+To run the application in the emulator:
+
+    cordova run android
+
+The application is not necessarily automatically started, so after the emulator starts, navigate to applications, and click on the icon with the text "Crownstone".
+
+To run the application:
+
+    cordova run android --device
