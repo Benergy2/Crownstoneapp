@@ -250,7 +250,6 @@ html, body{
     -webkit-border-radius:50px;
 	padding:5px;
 	width:90%;
-	table-header-group: none;
 	
 	}
 
@@ -263,5 +262,7 @@ html, body{
 	.InfoContainer{
 	margin-left: 5%;
 	}
-	
+	#FirstBlock{
+	margin:10%;
+	}
 }
