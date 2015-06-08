@@ -32,6 +32,47 @@ html, body{
         color: rgb(254,182,64);
     }
 
+    .lostPassword {
+        text-align: center;
+        font-size: 4em;
+        color: #ffffff;
+    }
+
+    .register {
+        text-align: center;
+        font-size: 4em;
+        color: #ffffff;
+    }
+
+    select.login {
+        font-size: 39px;
+        width: 60%;
+        margin-bottom: 8%;
+        padding: 2%;
+        color: rgb(254,182,64);
+    }
+
+    option.login {
+        font-size: 15px;
+        width: 60%;
+        margin-bottom: 8%;
+        padding: 2%;
+        color: rgb(254,182,64);
+    }
+
+    .registerButton {
+        padding: 17px;
+        background-color: rgb(254,182,64);
+        border-radius: 15px;
+        border-top: 4px solid #ffffff;
+        color: #FFFFFF;
+        font-family: Arial;
+        font-size: 60px;
+        text-decoration: none;
+        text-align: center;
+        width: auto;
+    }
+
     h1.title {
         text-align: center;
         font-family: benergy;
@@ -167,12 +208,13 @@ html, body{
 
     div.loginButtonHolder{
         overflow: hidden;
+        margin-top: 5%;
     }
 
     span.loginButton{
         float: left;
         width: 38%;
-        margin: 0 14.8% 0 0;
+        margin: 0% 14.8% 0 0;
     }
 
     a.forgotten{
