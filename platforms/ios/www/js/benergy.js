@@ -8,6 +8,7 @@ function init(){
     $('.loginButton').on('click', function(){
         var username =  $(".text1").val();
         var password =  $(".text2").val();
+
         $.ajax({
             type: 'GET',
             url: 'http://rubendeman.nl/api/index.php',
@@ -16,7 +17,6 @@ function init(){
             dataType: 'json',
             success: function(data) {
                 alert('Uw bent nu ingelogd');
-                localStorage.setItem("user_id", data['id']);
             },
             error: function(data) {
                 alert('Er is iets misgegaan');
