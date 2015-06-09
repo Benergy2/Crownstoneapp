@@ -1,0 +1,167 @@
+2015-06-09 11:38:09.319 Crownstone[3119:121846] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Data/Application/6B9AB21B-1C6F-479E-8AC9-F7CC3A0145DA/Library/Cookies/Cookies.binarycookies
+2015-06-09 11:38:09.477 Crownstone[3119:121846] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-09 11:38:09.477 Crownstone[3119:121846] Multi-tasking -> Device: YES, App: YES
+2015-06-09 11:38:09.480 Crownstone[3119:121846] Unlimited access to network resources
+2015-06-09 11:38:09.485 Crownstone[3119:121846] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-09 11:38:10.028 Crownstone[3119:121846] Resetting plugins due to page load.
+2015-06-09 11:38:10.193 Crownstone[3119:121846] Finished load of: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Bundle/Application/2580ACE4-FF3B-4E5F-B1CD-61993EE03B70/Crownstone.app/www/index.html
+2015-06-09 11:38:10.217 Crownstone[3119:121846] CDVPlugin class CDVDevice (pluginName: Device) does not exist.
+2015-06-09 11:38:10.217 Crownstone[3119:121846] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-06-09 11:38:10.217 Crownstone[3119:121846] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["Device976304093","Device","getDeviceInfo",[]]
+2015-06-09 11:38:12.160 Crownstone[3119:121846] Resetting plugins due to page load.
+2015-06-09 11:38:12.189 Crownstone[3119:121846] Finished load of: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Bundle/Application/2580ACE4-FF3B-4E5F-B1CD-61993EE03B70/Crownstone.app/www/login.html
+2015-06-09 11:38:12.213 Crownstone[3119:121846] CDVPlugin class CDVDevice (pluginName: Device) does not exist.
+2015-06-09 11:38:12.213 Crownstone[3119:121846] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-06-09 11:38:12.213 Crownstone[3119:121846] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["Device524310823","Device","getDeviceInfo",[]]
+2015-06-09 11:38:14.231 Crownstone[3119:121846] Resetting plugins due to page load.
+2015-06-09 11:38:14.245 Crownstone[3119:121846] Finished load of: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Bundle/Application/2580ACE4-FF3B-4E5F-B1CD-61993EE03B70/Crownstone.app/www/login.html
+2015-06-09 11:38:14.255 Crownstone[3119:121846] CDVPlugin class CDVDevice (pluginName: Device) does not exist.
+2015-06-09 11:38:14.255 Crownstone[3119:121846] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-06-09 11:38:14.255 Crownstone[3119:121846] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["Device660900977","Device","getDeviceInfo",[]]
+2015-06-09 11:38:16.804 Crownstone[3119:121846] Resetting plugins due to page load.
+2015-06-09 11:38:16.815 Crownstone[3119:121846] Finished load of: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Bundle/Application/2580ACE4-FF3B-4E5F-B1CD-61993EE03B70/Crownstone.app/www/login.html
+2015-06-09 11:38:16.826 Crownstone[3119:121846] CDVPlugin class CDVDevice (pluginName: Device) does not exist.
+2015-06-09 11:38:16.826 Crownstone[3119:121846] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-06-09 11:38:16.827 Crownstone[3119:121846] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["Device1756782320","Device","getDeviceInfo",[]]
+2015-06-09 11:38:36.602 Crownstone[3119:121846] Resetting plugins due to page load.
+2015-06-09 11:38:36.617 Crownstone[3119:121846] Finished load of: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Bundle/Application/2580ACE4-FF3B-4E5F-B1CD-61993EE03B70/Crownstone.app/www/login.html
+2015-06-09 11:38:36.627 Crownstone[3119:121846] CDVPlugin class CDVDevice (pluginName: Device) does not exist.
+2015-06-09 11:38:36.627 Crownstone[3119:121846] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-06-09 11:38:36.627 Crownstone[3119:121846] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["Device1869577845","Device","getDeviceInfo",[]]
+2015-06-09 11:38:39.147 Crownstone[3119:121846] Resetting plugins due to page load.
+2015-06-09 11:38:39.264 Crownstone[3119:121846] Finished load of: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Bundle/Application/2580ACE4-FF3B-4E5F-B1CD-61993EE03B70/Crownstone.app/www/home.html
+2015-06-09 11:39:32.997 Crownstone[3119:122973] Communications error: <OS_xpc_error: <error: 0x2da25f4> { count = 1, contents =
+	"XPCErrorDescription" => <string: 0x2da283c> { length = 22, contents = "Connection interrupted" }
+}>
+2015-06-09 11:42:00.321 Crownstone[3551:125519] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Data/Application/98B56F5D-F2A3-425E-8ACE-A1A05FF2C5C4/Library/Cookies/Cookies.binarycookies
+2015-06-09 11:42:00.798 Crownstone[3551:125519] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-09 11:42:00.799 Crownstone[3551:125519] Multi-tasking -> Device: YES, App: YES
+2015-06-09 11:42:00.818 Crownstone[3551:125519] Unlimited access to network resources
+2015-06-09 11:42:00.834 Crownstone[3551:125519] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-09 11:42:01.825 Crownstone[3551:125519] Resetting plugins due to page load.
+2015-06-09 11:42:02.087 Crownstone[3551:125519] Finished load of: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Bundle/Application/55EF388D-3AF1-4471-B8DE-7094A1315D9E/Crownstone.app/www/index.html
+2015-06-09 11:42:02.235 Crownstone[3551:125519] CDVPlugin class CDVDevice (pluginName: Device) does not exist.
+2015-06-09 11:42:02.236 Crownstone[3551:125519] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-06-09 11:42:02.236 Crownstone[3551:125519] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["Device1806063627","Device","getDeviceInfo",[]]
+2015-06-09 11:42:03.946 Crownstone[3551:125519] Resetting plugins due to page load.
+2015-06-09 11:42:03.996 Crownstone[3551:125519] Finished load of: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Bundle/Application/55EF388D-3AF1-4471-B8DE-7094A1315D9E/Crownstone.app/www/login.html
+2015-06-09 11:42:04.012 Crownstone[3551:125519] CDVPlugin class CDVDevice (pluginName: Device) does not exist.
+2015-06-09 11:42:04.012 Crownstone[3551:125519] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-06-09 11:42:04.012 Crownstone[3551:125519] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["Device1841471087","Device","getDeviceInfo",[]]
+2015-06-09 11:42:07.636 Crownstone[3551:125519] Resetting plugins due to page load.
+2015-06-09 11:42:07.658 Crownstone[3551:125519] Finished load of: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Bundle/Application/55EF388D-3AF1-4471-B8DE-7094A1315D9E/Crownstone.app/www/lostPassword.html
+2015-06-09 11:43:08.107 Crownstone[3876:126444] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Data/Application/6FBB9EEB-C2B2-4394-AA7B-9C32656FAC28/Library/Cookies/Cookies.binarycookies
+2015-06-09 11:43:08.183 Crownstone[3876:126444] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-09 11:43:08.183 Crownstone[3876:126444] Multi-tasking -> Device: YES, App: YES
+2015-06-09 11:43:08.185 Crownstone[3876:126444] Unlimited access to network resources
+2015-06-09 11:43:08.187 Crownstone[3876:126444] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-09 11:43:08.356 Crownstone[3876:126444] Resetting plugins due to page load.
+2015-06-09 11:43:08.402 Crownstone[3876:126444] Finished load of: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Bundle/Application/AA26CC87-7501-443A-9EBF-3DE1034C8EBA/Crownstone.app/www/index.html
+2015-06-09 11:43:08.463 Crownstone[3876:126444] CDVPlugin class CDVDevice (pluginName: Device) does not exist.
+2015-06-09 11:43:08.463 Crownstone[3876:126444] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-06-09 11:43:08.464 Crownstone[3876:126444] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["Device1702314170","Device","getDeviceInfo",[]]
+2015-06-09 11:43:10.757 Crownstone[3876:126444] Resetting plugins due to page load.
+2015-06-09 11:43:10.772 Crownstone[3876:126444] Finished load of: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Bundle/Application/AA26CC87-7501-443A-9EBF-3DE1034C8EBA/Crownstone.app/www/login.html
+2015-06-09 11:43:10.785 Crownstone[3876:126444] CDVPlugin class CDVDevice (pluginName: Device) does not exist.
+2015-06-09 11:43:10.785 Crownstone[3876:126444] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-06-09 11:43:10.785 Crownstone[3876:126444] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["Device1325937906","Device","getDeviceInfo",[]]
+2015-06-09 11:43:12.260 Crownstone[3876:126444] Resetting plugins due to page load.
+2015-06-09 11:43:12.270 Crownstone[3876:126444] Finished load of: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Bundle/Application/AA26CC87-7501-443A-9EBF-3DE1034C8EBA/Crownstone.app/www/lostPassword.html
+2015-06-09 11:44:56.569 Crownstone[4248:129132] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Data/Application/35DFB6A2-815F-467B-BCD2-EAFBDCF745AE/Library/Cookies/Cookies.binarycookies
+2015-06-09 11:44:56.682 Crownstone[4248:129132] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-09 11:44:56.683 Crownstone[4248:129132] Multi-tasking -> Device: YES, App: YES
+2015-06-09 11:44:56.685 Crownstone[4248:129132] Unlimited access to network resources
+2015-06-09 11:44:56.688 Crownstone[4248:129132] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-09 11:44:56.847 Crownstone[4248:129132] Resetting plugins due to page load.
+2015-06-09 11:44:56.893 Crownstone[4248:129132] Finished load of: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Bundle/Application/2C9CB308-297D-4F4E-B947-9E6FF8588645/Crownstone.app/www/index.html
+2015-06-09 11:44:56.952 Crownstone[4248:129132] CDVPlugin class CDVDevice (pluginName: Device) does not exist.
+2015-06-09 11:44:56.952 Crownstone[4248:129132] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-06-09 11:44:56.953 Crownstone[4248:129132] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["Device1939514831","Device","getDeviceInfo",[]]
+2015-06-09 11:45:33.355 Crownstone[4572:129904] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Data/Application/8036BFB7-7E03-4566-8AED-CA592AA00DA3/Library/Cookies/Cookies.binarycookies
+2015-06-09 11:45:33.424 Crownstone[4572:129904] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-09 11:45:33.424 Crownstone[4572:129904] Multi-tasking -> Device: YES, App: YES
+2015-06-09 11:45:33.426 Crownstone[4572:129904] Unlimited access to network resources
+2015-06-09 11:45:33.429 Crownstone[4572:129904] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-09 11:45:33.581 Crownstone[4572:129904] Resetting plugins due to page load.
+2015-06-09 11:45:33.679 Crownstone[4572:129904] Finished load of: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Bundle/Application/345EBA0C-0CE0-40F6-AFE9-F0F0232A08C2/Crownstone.app/www/index.html
+2015-06-09 11:45:33.696 Crownstone[4572:129904] CDVPlugin class CDVDevice (pluginName: Device) does not exist.
+2015-06-09 11:45:33.696 Crownstone[4572:129904] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-06-09 11:45:33.696 Crownstone[4572:129904] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["Device1484050878","Device","getDeviceInfo",[]]
+2015-06-09 11:45:35.560 Crownstone[4572:129904] Resetting plugins due to page load.
+2015-06-09 11:45:35.581 Crownstone[4572:129904] Finished load of: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Bundle/Application/345EBA0C-0CE0-40F6-AFE9-F0F0232A08C2/Crownstone.app/www/login.html
+2015-06-09 11:45:35.599 Crownstone[4572:129904] CDVPlugin class CDVDevice (pluginName: Device) does not exist.
+2015-06-09 11:45:35.599 Crownstone[4572:129904] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-06-09 11:45:35.600 Crownstone[4572:129904] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["Device477814648","Device","getDeviceInfo",[]]
+2015-06-09 11:45:36.783 Crownstone[4572:129904] Resetting plugins due to page load.
+2015-06-09 11:45:36.798 Crownstone[4572:129904] Finished load of: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Bundle/Application/345EBA0C-0CE0-40F6-AFE9-F0F0232A08C2/Crownstone.app/www/lostPassword.html
+2015-06-09 11:46:11.046 Crownstone[4893:130647] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Data/Application/462A83C5-3AD3-43A6-BEC4-E6A253EE0B84/Library/Cookies/Cookies.binarycookies
+2015-06-09 11:46:11.116 Crownstone[4893:130647] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-09 11:46:11.117 Crownstone[4893:130647] Multi-tasking -> Device: YES, App: YES
+2015-06-09 11:46:11.118 Crownstone[4893:130647] Unlimited access to network resources
+2015-06-09 11:46:11.121 Crownstone[4893:130647] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-09 11:46:11.281 Crownstone[4893:130647] Resetting plugins due to page load.
+2015-06-09 11:46:11.372 Crownstone[4893:130647] Finished load of: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Bundle/Application/5D8CB805-5866-45D0-9A4C-DDDA1CA19B6A/Crownstone.app/www/index.html
+2015-06-09 11:46:11.396 Crownstone[4893:130647] CDVPlugin class CDVDevice (pluginName: Device) does not exist.
+2015-06-09 11:46:11.396 Crownstone[4893:130647] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-06-09 11:46:11.396 Crownstone[4893:130647] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["Device1860253928","Device","getDeviceInfo",[]]
+2015-06-09 11:46:12.881 Crownstone[4893:130647] Resetting plugins due to page load.
+2015-06-09 11:46:12.895 Crownstone[4893:130647] Finished load of: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Bundle/Application/5D8CB805-5866-45D0-9A4C-DDDA1CA19B6A/Crownstone.app/www/login.html
+2015-06-09 11:46:12.906 Crownstone[4893:130647] CDVPlugin class CDVDevice (pluginName: Device) does not exist.
+2015-06-09 11:46:12.907 Crownstone[4893:130647] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-06-09 11:46:12.907 Crownstone[4893:130647] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["Device1469647374","Device","getDeviceInfo",[]]
+2015-06-09 11:46:16.331 Crownstone[4893:130647] Resetting plugins due to page load.
+2015-06-09 11:46:16.343 Crownstone[4893:130647] Finished load of: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Bundle/Application/5D8CB805-5866-45D0-9A4C-DDDA1CA19B6A/Crownstone.app/www/lostPassword.html
+2015-06-09 11:46:17.691 Crownstone[4893:130647] Resetting plugins due to page load.
+2015-06-09 11:46:17.702 Crownstone[4893:130647] Finished load of: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Bundle/Application/5D8CB805-5866-45D0-9A4C-DDDA1CA19B6A/Crownstone.app/www/login.html
+2015-06-09 11:46:17.711 Crownstone[4893:130647] CDVPlugin class CDVDevice (pluginName: Device) does not exist.
+2015-06-09 11:46:17.712 Crownstone[4893:130647] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-06-09 11:46:17.712 Crownstone[4893:130647] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["Device1851568952","Device","getDeviceInfo",[]]
+2015-06-09 11:46:24.979 Crownstone[4893:130647] Resetting plugins due to page load.
+2015-06-09 11:46:25.012 Crownstone[4893:130647] Finished load of: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Bundle/Application/5D8CB805-5866-45D0-9A4C-DDDA1CA19B6A/Crownstone.app/www/home.html
+2015-06-09 11:46:32.628 Crownstone[4893:130647] Resetting plugins due to page load.
+2015-06-09 11:46:32.645 Crownstone[4893:130647] Finished load of: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Bundle/Application/5D8CB805-5866-45D0-9A4C-DDDA1CA19B6A/Crownstone.app/www/index.html
+2015-06-09 11:46:32.656 Crownstone[4893:130647] CDVPlugin class CDVDevice (pluginName: Device) does not exist.
+2015-06-09 11:46:32.656 Crownstone[4893:130647] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-06-09 11:46:32.657 Crownstone[4893:130647] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["Device1533728057","Device","getDeviceInfo",[]]
