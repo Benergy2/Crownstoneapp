@@ -56,6 +56,23 @@ function init(){
     // lostPassword button
     $('.lostPasswordButton').on('click', function(){
 
+        alert('sad');
+        var email =  $(".text1").val();
+
+        $.ajax({
+            type: 'GET',
+            url: 'http://rubendeman.nl/api/index.php',
+            contentType: 'application/json; charset=utf-8',
+            data: { action: "lostPassword", email: email },
+            dataType: 'json',
+            success: function(data) {
+                alert('Er is een link naar uw email gestuurt!');
+            },
+            error: function(data) {
+                alert('Er is iets misgegaan'+this.url);
+                console.log(data);
+            }
+        });
     });
 
 }
