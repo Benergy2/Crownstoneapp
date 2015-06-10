@@ -35,7 +35,7 @@ function init(){
 
         var key = "";
         var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-        for( var i=0; i < 50; i++ )
+        for( var i=0; i < 4; i++ )
             key += possible.charAt(Math.floor(Math.random() * possible.length));
 
         $.ajax({
@@ -56,7 +56,6 @@ function init(){
     // lostPassword button
     $('.lostPasswordButton').on('click', function(){
 
-        alert('sad');
         var email =  $(".text1").val();
 
         $.ajax({
@@ -67,12 +66,44 @@ function init(){
             dataType: 'json',
             success: function(data) {
                 alert('Er is een link naar uw email gestuurt!');
+                console.log(data);
+                console.log(this.url)
             },
             error: function(data) {
                 alert('Er is iets misgegaan'+this.url);
                 console.log(data);
             }
         });
+
+        $(this).unbind();
+
+    });
+
+    $('.lostPassword2Button').on('click', function(){
+
+        var email =  $(".text1").val();
+        var code =  $(".text2").val();
+        var new_password =  $(".text3").val();
+
+        $.ajax({
+            type: 'GET',
+            url: 'http://rubendeman.nl/api/index.php',
+            contentType: 'application/json; charset=utf-8',
+            data: { action: "lostPassword2",email:email, code: code, new_password:new_password },
+            dataType: 'json',
+            success: function(data) {
+                alert('Uw wachtwoord is aangepast!');
+                console.log(data);
+                console.log(this.url)
+            },
+            error: function(data) {
+                alert('Er is iets misgegaan'+this.url);
+                console.log(data);
+            }
+        });
+
+        $(this).unbind();
+
     });
 
 }

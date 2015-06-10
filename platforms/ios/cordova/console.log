@@ -505,3 +505,6 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2015-06-10 11:03:07.354 Crownstone[19637:372298] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["Device1772211459","Device","getDeviceInfo",[]]
 2015-06-10 11:03:08.772 Crownstone[19637:372298] Resetting plugins due to page load.
 2015-06-10 11:03:08.799 Crownstone[19637:372298] Finished load of: file:///Users/rubendeman/Library/Developer/CoreSimulator/Devices/35148872-2E21-4E31-9725-B22E219D5804/data/Containers/Bundle/Application/0C8C5464-41FB-4F59-9B52-7422046095DB/Crownstone.app/www/lostPassword.html
+2015-06-10 18:10:26.518 Crownstone[19637:396087] Communications error: <OS_xpc_error: <error: 0x2d835f4> { count = 1, contents =
+	"XPCErrorDescription" => <string: 0x2d8383c> { length = 22, contents = "Connection interrupted" }
+}>

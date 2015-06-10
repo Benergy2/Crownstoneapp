@@ -56,7 +56,6 @@ function init(){
     // lostPassword button
     $('.lostPasswordButton').on('click', function(){
 
-        alert('sad');
         var email =  $(".text1").val();
 
         $.ajax({

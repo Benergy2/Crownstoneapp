@@ -13,6 +13,12 @@ switch($action){
 	case "lostPassword":
 		lostPasswordEmail();
 	break;
+	case "passwordLink":
+		passwordLink();
+	break;
+	case "lostPassword2":
+		passwordReset();
+	break;
 }
 
 function register(){
@@ -59,7 +65,7 @@ function login(){
 	$query = mysql_query($sql);
 	$rows = mysql_fetch_array($query);
 	
-	if($rows['Account_password'] == md5($password)){
+	if($rows['Account_password'] == md5($password) && $rows['Account_verify'] == "true" ){
 		$response_array['status'] = 'success';
 		$response_array['id'] = $rows['Account_id'];
 		header('content-type: application/json;');
@@ -86,22 +92,16 @@ function lostPasswordEmail(){
 	
 	// multiple recipients
 	$to  = $email;
-	
+		
 	// subject
 	$subject = 'Lost password link';
 	
 	// message
-	$message = '<p>Klik op onderstaande link om uw wachtwoord te wijzigen</p><a href="http://rubendeman.nl/api/index.php?action=passwordLink&key=$key">Link</a>';
+	$message = '<p>Vul onderstaande code in de app in om uw wachtwoord te wijzigen</p><strong>'.$key.'</strong>';
 	
 	// To send HTML mail, the Content-type header must be set
 	$headers  = 'MIME-Version: 1.0' . "\r\n";
 	$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-	
-	// Additional headers
-	/*$headers .= 'To: Mary <mary@example.com>, Kelly <kelly@example.com>' . "\r\n";
-	$headers .= 'From: Birthday Reminder <birthday@example.com>' . "\r\n";
-	$headers .= 'Cc: birthdayarchive@example.com' . "\r\n";
-	$headers .= 'Bcc: birthdaycheck@example.com' . "\r\n";*/
 	
 	// Mail it
 	$send = mail($to, $subject, $message, $headers);
@@ -118,6 +118,39 @@ function lostPasswordEmail(){
         header('Access-Control-Allow-Origin: *');
         header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
         die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
+	}
+}
+
+function passwordReset(){
+	$email = $_GET['email'];
+	$code = $_GET['code'];
+	$new_password = $_GET['new_password'];
+	$sql = "SELECT * FROM  `Account` WHERE `Account_email` = '$email' AND `Account_key` = '$code'";
+	$query = mysql_query($sql);
+	$rows = mysql_num_rows($query);
+	
+	if($rows > 0){
+		$sql = "UPDATE  `rubendem-4`.`Account` SET  `Account_password` = MD5(  '$new_password' ) WHERE  `Account`.`Account_email` = '$email';";
+		if(mysql_query($sql)){
+			$response_array['status'] = 'success';
+			$response_array['id'] = $rows['Account_id'];
+			header('content-type: application/json;');
+			header('Access-Control-Allow-Origin: *');
+			header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+			print json_encode($response_array);
+		}else{
+		header('HTTP/1.1 500 Internal Server Booboo');
+        header('Content-Type: application/json; charset=UTF-8');
+        header('Access-Control-Allow-Origin: *');
+        header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+        die(json_encode(array('message' => 'ERROR', 'code' => 1337)));	
+		}
+	}else{
+		header('HTTP/1.1 500 Internal Server Booboo');
+        header('Content-Type: application/json; charset=UTF-8');
+        header('Access-Control-Allow-Origin: *');
+        header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+        die(json_encode(array('message' => 'ERROR', 'code' => 1337)));	
 	}
 }
 
