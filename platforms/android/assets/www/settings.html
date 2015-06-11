@@ -1,83 +1,94 @@
 <html>
-	<head>
+<head>
     <link rel="stylesheet" href="css/stylesheet.css">
-	 <title>Instellingen</title>
-	</head>
-	<body>
- <div class="topMenu">
-        <span class="topMenuTitle">Benergy</span>
-        <div class="logoutHolder">
-            <img src="img/logout-icon.png" class="logoutButton">
-            <span class="linkTitle">Logout</span>
-        </div>
-    </div>
+    <title>Instellingen</title>
+	<script type="text/javascript" src="js/etc.js"></script> 
+</head>
+<body>
+<div class="topMenu">
+    <span class="topMenuTitle">Benergy</span>
 
-    <img class="coverImage" src="img/beer-background.jpg">
+    <div class="logoutHolder">
+        <img src="img/logout-icon.png" class="logoutButton">
+        <span class="linkTitle">Logout</span>
+    </div>
+</div>
+
+<img class="coverImage" src="img/beer-background.jpg">
+
+<h1 class="register">Instellingen</h1>
 
 <div class="InfoContainer">
-<table class="InfoTable">
-  <tr>
-    <td>Totale Crownstones</td>
-    <td>    <div class="onoffswitch">
-        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-        <label class="onoffswitch-label" for="myonoffswitch">
-            <span class="onoffswitch-inner"></span>
-            <span class="onoffswitch-switch"></span>
-        </label>
-    </div></td>
-  </tr>
-  <tr>
-    <td>Totale Energie</td>
-    <td>    <div class="onoffswitch">
-        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-        <label class="onoffswitch-label" for="myonoffswitch">
-            <span class="onoffswitch-inner"></span>
-            <span class="onoffswitch-switch"></span>
-        </label>
-    </div></td>
-  </tr>
-  <tr>
-    <td>Verschil vorige maand</td>
-    <td>    <div class="onoffswitch">
-        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-        <label class="onoffswitch-label" for="myonoffswitch">
-            <span class="onoffswitch-inner"></span>
-            <span class="onoffswitch-switch"></span>
-        </label>
-    </div></td>
-  </tr>
-  <tr>
-    <td>Totale prijs</td>
-    <td>&#8364; 70</td>
-  </tr>
-    <tr>
-    <td>Prijs vorige maand</td>
-    <td>&#8364; 55</td>
-  </tr>
-  
-  
-</table>
-</div>
-	
-	
+    <table class="InfoTable">
+        <tr class="spaceUnder">
+            <td><span class="bold">Prive</span></td>
+            <td>
+                <div class="onoffswitch">
+                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                    <label class="onoffswitch-label" for="myonoffswitch">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                    </label>
+                </div>
+            </td>
+        </tr>
+        <tr class="spaceUnder">
+            <td><span class="bold">Apparaten</span></td>
+            <td>
+                <div class="onoffswitch">
+                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" checked>
+                    <label class="onoffswitch-label" for="myonoffswitch">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                    </label>
+                </div>
+            </td>
+        </tr>
+        <tr class="spaceUnder">
+            <td><span class="bold">Groups</span></td>
+            <td>
+                <div class="onoffswitch">
+                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" checked>
+                    <label class="onoffswitch-label" for="myonoffswitch">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                    </label>
+                </div>
+            </td>
+        </tr>
+        <tr class="spaceUnder">
+		
+            <td><span class="bold">Groepen</span></td>
+            <td><a href="Groups.html">></a></td>
+        </tr>
 
+
+
+    </table>
+</div>
 
 
     <div class="bottomMenu">
         <ul>
             <li>
-                <img src="img/home-icon2.png">
-                <span class="linkTitle">Home</span>
+                
+				<a href="home.html">
+				<img src="img/home-icon3.png">
+                <span class="linkTitle">huis</span></a>
             </li>
             <li>
-                <img src="img/person-icon2.png">
-                <span class="linkTitle">Your room</span>
+			<a href="room.html">
+                <img src="img/person-icon3.png">
+                <span class="linkTitle">jouw kamer</span>
             </li>
             <li>
-                <img src="img/option-icon2.png">
-                <span class="linkTitle">Settings</span>
+			<a href="settings.html">
+                <img src="img/option-icon3.png">
+                <span class="linkTitle">Instellingen</span>
+				</a>
             </li>
         </ul>
     </div>
-	
-	</html>
+</body>
+
+</html>

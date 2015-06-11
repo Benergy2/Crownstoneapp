@@ -1,4 +1,4 @@
-html, body{
+html, body {
     margin: 0;
     padding: 0;
     background: #FE9B00;
@@ -17,19 +17,40 @@ html, body{
         margin: auto;
     }
 
-    ::-webkit-input-placeholder { /* WebKit browsers */
-        color: rgb(254,182,64);
+    ::-webkit-input-placeholder {
+        /* WebKit browsers */
+        color: rgb(254, 182, 64);
     }
-    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-        color: rgb(254,182,64);
-        opacity:  1;
+
+    :-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: rgb(254, 182, 64);
+        opacity: 1;
     }
-    ::-moz-placeholder { /* Mozilla Firefox 19+ */
-        color: rgb(254,182,64);
-        opacity:  1;
+
+    ::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: rgb(254, 182, 64);
+        opacity: 1;
     }
-    :-ms-input-placeholder { /* Internet Explorer 10+ */
-        color: rgb(254,182,64);
+
+    :-ms-input-placeholder {
+        /* Internet Explorer 10+ */
+        color: rgb(254, 182, 64);
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    .meting {
+        font-style: italic;
+        font-size: 51px;
+        margin-left: 85px;
+    }
+
+    .italic {
+        font-style: italic;
     }
 
     .lostPassword {
@@ -49,7 +70,7 @@ html, body{
         width: 60%;
         margin-bottom: 8%;
         padding: 2%;
-        color: rgb(254,182,64);
+        color: rgb(254, 182, 64);
     }
 
     option.login {
@@ -57,12 +78,12 @@ html, body{
         width: 60%;
         margin-bottom: 8%;
         padding: 2%;
-        color: rgb(254,182,64);
+        color: rgb(254, 182, 64);
     }
 
     .registerButton {
         padding: 17px;
-        background-color: rgb(254,182,64);
+        background-color: rgb(254, 182, 64);
         border-radius: 15px;
         border-top: 4px solid #ffffff;
         color: #FFFFFF;
@@ -89,7 +110,7 @@ html, body{
 
     .buttonStyle {
         padding: 17px;
-        background-color: rgb(254,182,64);
+        background-color: rgb(254, 182, 64);
         border-radius: 15px;
         border-top: 4px solid #ffffff;
         color: #FFFFFF;
@@ -107,21 +128,21 @@ html, body{
         border-bottom: 4px dashed #FE9B00;
     }
 
-    span.topMenuTitle{
+    span.topMenuTitle {
         font-family: benergy;
-        color: rgb(254,182,64);
+        color: rgb(254, 182, 64);
         font-size: 100px;
         display: inline-block;
         margin: 3% 0 0% 2%;
     }
 
-    span.topMenuTitle:before{
+    span.topMenuTitle:before {
         margin: 0% 2% 0 0%;
         content: url('../img/beer-icon2.gif');
         zoom: 0.35;
     }
 
-    div.logoutHolder{
+    div.logoutHolder {
         position: absolute;
         right: 0;
         display: inline-block;
@@ -129,11 +150,11 @@ html, body{
         margin: 0 4% 0 0;
     }
 
-    div.logoutHolder span{
-        color: rgb(254,182,64);
+    div.logoutHolder span {
+        color: rgb(254, 182, 64);
     }
 
-    img.logoutButton{
+    img.logoutButton {
         display: block;
         right: 0;
         padding: 5px;
@@ -145,21 +166,21 @@ html, body{
         bottom: 0;
         width: 100%;
         height: 140px;
-        background-color: rgb(232,161,51);
+        background-color: rgb(232, 161, 51);
         border-radius: 10px;
     }
 
-    .bottomMenu ul{
+    .bottomMenu ul {
         list-style-type: none;
     }
 
-    .bottomMenu ul li{
+    .bottomMenu ul li {
         display: inline-block;
         margin: -2% 0% 0 15%;
         text-align: center;
     }
 
-    span.linkTitle{
+    span.linkTitle {
         display: block;
         color: #ffffff;
         font-size: 30px;
@@ -171,7 +192,7 @@ html, body{
         margin: 40% 0 0 0;
     }
 
-    span.indexButton{
+    span.indexButton {
         display: block;
         margin: 3% 0 0 0;
     }
@@ -182,42 +203,42 @@ html, body{
         margin: 50% 0 0 0;
     }
 
-    form.login{
+    form.login {
         margin: 0 0 15% 0;
 
         width: 100%;
     }
 
-    input.login[type=text]{
+    input.login[type=text] {
         font-size: 39px;
         width: 95.5%;
         margin-bottom: 8%;
         padding: 2%;
     }
 
-    label.rememberText{
+    label.rememberText {
         font-size: 39px;
         color: #ffffff;
     }
 
-    input.rememberCheckbox[type=checkbox]{
+    input.rememberCheckbox[type=checkbox] {
         float: right;
         width: 46px;
         height: 46px;
     }
 
-    div.loginButtonHolder{
+    div.loginButtonHolder {
         overflow: hidden;
         margin-top: 5%;
     }
 
-    span.loginButton{
+    span.loginButton {
         float: left;
         width: 38%;
         margin: 0% 14.8% 0 0;
     }
 
-    a.forgotten{
+    a.forgotten {
         display: block;
         margin: 8% 0 0 0;
         font-size: 39px;
@@ -225,15 +246,14 @@ html, body{
     }
 
     /*Home*/
-
-    img.coverImage{
+    img.coverImage {
         display: block;
         width: 100%;
         height: 260px;
         visibility: hidden;
     }
 
-    h1.homeTitle{
+    h1.Title {
         text-align: center;
 
         font-size: 70px;
@@ -241,13 +261,13 @@ html, body{
         color: white;
     }
 
-    .homeInfoHolder{
+    .homeInfoHolder {
         width: 90%;
         margin: auto;
         /* border: 2px solid white; */
     }
 
-    .homeInfo td{
+    .homeInfo td {
         font-size: 48px;
 
         padding: 24px;
@@ -256,7 +276,7 @@ html, body{
     .homeInfo {
         float: left;
         /* display: inline-block; */
-        background-color: rgb(254,182,64);
+        background-color: rgb(254, 182, 64);
         margin: 8px 0% 0 30px;
         height: 400px;
         width: 44%;
@@ -269,9 +289,7 @@ html, body{
         box-shadow: inset 0px 0px 40px 0px white;
     }
 
-	
-	
-    .homeInfoAmount{
+    .homeInfoAmount {
         display: block;
 
         margin: 36% 0 0 0;
@@ -282,93 +300,153 @@ html, body{
         /* right: 0; */
         /* bottom: 0; */
     }
-	.InfoTable{
-	float: left;
-	font-size: 51px;
-	border: 4px solid black;
 
-    border-radius:50px;
-	 -moz-border-radius:50px;
-    -webkit-border-radius:50px;
-	padding:5px;
-	width:90%;
-	
-	}
+    .InfoTable {
+        float: left;
+        font-size: 51px;
+        border: 4px solid black;
 
-	
-	.InfoTable td{
-	padding-left:1%;
-	margin-left:10%;
-	}
-
-	.InfoContainer{
-	margin-left: 5%;
-	}
-	#FirstBlock{
-	margin:10%;
-	}
-	
-	/*
-	https://proto.io/freebies/onoff/
-	
-	*/
-	    .onoffswitch {
-        position: relative; width: 90px;
-        -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+        border-radius: 50px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        padding: 5px;
+        width: 95%;
+        margin-top: 5%;
     }
+
+    tr.spaceUnder > td
+    {
+        padding-bottom: 1em;
+    }
+
+    .InfoTable td {
+        padding-left: 1%;
+        margin-left: 10%;
+    }
+
+    .InfoContainer {
+        margin-left: 5%;
+    }
+
+    #FirstBlock {
+        margin: 10%;
+    }
+
+    /*
+    https://proto.io/freebies/onoff/
+
+    */
+    .onoffswitch {
+        position: relative;
+        width: 90px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+
     .onoffswitch-checkbox {
         display: none;
     }
+
     .onoffswitch-label {
-        display: block; overflow: hidden; cursor: pointer;
-        border: 2px solid #999999; border-radius: 20px;
+        display: block;
+        overflow: hidden;
+        cursor: pointer;
+        border: 2px solid #999999;
+        border-radius: 20px;
     }
+
     .onoffswitch-inner {
-        display: block; width: 200%; margin-left: -100%;
-        -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
-        -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
+        display: block;
+        width: 200%;
+        margin-left: -100%;
+        -moz-transition: margin 0.3s ease-in 0s;
+        -webkit-transition: margin 0.3s ease-in 0s;
+        -o-transition: margin 0.3s ease-in 0s;
+        transition: margin 0.3s ease-in 0s;
     }
+
     .onoffswitch-inner:before, .onoffswitch-inner:after {
-        display: block; float: left; width: 50%; height: 40px; padding: 0; line-height: 30px;
-        font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
-        -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+        display: block;
+        float: left;
+        width: 50%;
+        height: 40px;
+        padding: 0;
+        line-height: 30px;
+        font-size: 14px;
+        color: white;
+        font-family: Trebuchet, Arial, sans-serif;
+        font-weight: bold;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
     }
+
     .onoffswitch-inner:before {
         content: "";
         padding-left: 10px;
-        background-color: #34A7C1; color: #FFFFFF;
+        background-color: #34A7C1;
+        color: #FFFFFF;
     }
+
     .onoffswitch-inner:after {
         content: "";
         padding-right: 10px;
-        background-color: #EEEEEE; color: #999999;
+        background-color: #EEEEEE;
+        color: #999999;
         text-align: right;
     }
+
     .onoffswitch-switch {
-        display: block; width: 18px; margin: 6px;
+        display: block;
+        width: 18px;
+        margin: 6px;
         background: #FFFFFF;
-        border: 2px solid #999999; border-radius: 20px;
-        position: absolute; top: 0; bottom: 0; right: 56px;
-        -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
-        -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s; 
+        border: 2px solid #999999;
+        border-radius: 20px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 56px;
+        -moz-transition: all 0.3s ease-in 0s;
+        -webkit-transition: all 0.3s ease-in 0s;
+        -o-transition: all 0.3s ease-in 0s;
+        transition: all 0.3s ease-in 0s;
     }
+
     .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
         margin-left: 0;
     }
+
     .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-        right: 0px; 
+        right: 0px;
     }
+
+    .icons {
+        width: 100px;
+        height: 100px;
+    }
+
+    /*
+    Einde On of code
+
+    */
 	
-	/*
-	Einde On of code
-	
-	*/
-	
-	
-	
-	
-	
-	
-	
-	
+	/* import index.css */
+
+
+h1.title {
+    text-align: center;
+    font-family: benergy;
+    font-size: 75px;
+    color: #ffffff;
+}
+
+h1.title:after {
+    display: inline-block;
+    content: url('../img/beer-icon2.gif');
+    width: 10%;
+    height: 10%;
+    zoom: 0.35;
+}
 }
