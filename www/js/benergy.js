@@ -17,9 +17,12 @@ function init(){
             success: function(data) {
                 alert('Uw bent nu ingelogd');
                 localStorage.setItem("user_id", data['id']);
+				window.location.assign("home.html")
+				
             },
             error: function(data) {
                 alert('Er is iets misgegaan');
+				
                 console.log(data);
             }
         });

@@ -253,7 +253,7 @@ html, body {
         visibility: hidden;
     }
 
-    h1.homeTitle {
+    h1.Title {
         text-align: center;
 
         font-size: 70px;
@@ -431,5 +431,288 @@ html, body {
     Einde On of code
 
     */
+	
+	/* import index.css */
+	* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#FE9B00;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+
+    background-attachment:fixed;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+/* Portrait layout (default) */
+.app {
+    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+    /* offset horizontal: half of text area width */
+}
+
+a{
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: benergy;
+    src: url('../fonts/oktoberfest.ttf');
+}
+
+
+/*General*/
+div#container {
+    width: 80%;
+    margin: auto;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: rgb(254, 182, 64);
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: rgb(254, 182, 64);
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: rgb(254, 182, 64);
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: rgb(254, 182, 64);
+}
+
+h1.title {
+    text-align: center;
+    font-family: benergy;
+    font-size: 75px;
+    color: #ffffff;
+}
+
+h1.title:after {
+    display: inline-block;
+    content: url('../img/beer-icon2.gif');
+    width: 10%;
+    height: 10%;
+    zoom: 0.35;
+}
+
+.buttonStyle {
+    padding: 6px;
+    background-color: rgb(254, 182, 64);
+    border-radius: 6px;
+    border-top: 1px solid #ffffff;
+    color: #FFFFFF;
+    font-family: Arial;
+    font-size: 22px;
+    text-decoration: none;
+    text-align: center;
+    width: auto;
+}
+
+.topMenu {
+    width: 100%;
+    background: white;
+    height: 58px;
+    border-bottom: 1px dashed #FE9B00;
+}
+
+span.topMenuTitle {
+    font-family: benergy;
+    color: rgb(254, 182, 64);
+    font-size: 36px;
+    display: inline-block;
+    width: 30%;
+    margin: 3% 0 0% 2%;
+}
+
+span.topMenuTitle:before {
+    margin: 0% 4% 0 0%;
+    content: url('../img/beer-icon2.gif');
+    zoom: 0.15;
+}
+
+div.logoutHolder {
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    text-align: center;
+    margin: 0 4% 0 0;
+}
+
+div.logoutHolder span, a{
+    color: rgb(254, 182, 64);
+}
+
+img.logoutButton {
+    display: block;
+    right: 0;
+    padding: 5px;
+    margin: 1% 2% 0 0;
+}
+
+.bottomMenu {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 54px;
+    background-color: rgb(232, 161, 51);
+    border-radius: 2px;
+}
+
+.bottomMenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bottomMenu ul li {
+    display: inline-block;
+    margin: 0% 0% 0 16%;
+    text-align: center;
+}
+
+.linkTitle {
+    display: block;
+    color: #ffffff;
+    /* font-size: 30px; */
+}
+
+/*Index*/
+div.titleHolderIndex {
+    width: 100%;
+    margin: 41% 0 18% 0;
+}
+
+.indexButton {
+    display: block;
+    margin: 3% 0 0 0;
+}
+
+/*Login*/
+div.titleHolderLogin {
+    width: 100%;
+    margin: 50% 0 0 0;
+}
+
+form.login {
+    margin: 0 0 15% 0;
+
+    width: 100%;
+}
+
+input.login[type=text] {
+    font-size: 16px;
+    width: 94.5%;
+    margin-bottom: 8%;
+    padding: 2%;
+}
+
+label.rememberText {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+input.rememberCheckbox[type=checkbox] {
+    float: right;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+}
+
+div.loginButtonHolder {
+    overflow: hidden;
+}
+
+.loginButton {
+    float: left;
+    width: 38%;
+    margin: 0 14.8% 0 0;
+}
+
+a.forgotten {
+    display: block;
+    margin: 8% 0 0 0;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+/*Home*/
+img.coverImage {
+    display: block;
+    width: 100%;
+    height: 75px;
+    visibility: hidden;
+}
+
+h1.homeTitle {
+    text-align: center;
+    font-size: 26px;
+    color: white;
+}
+
+.homeInfoHolder {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.homeInfo td {
+    font-size: 48px;
+    padding: 24px;
+}
+
+.homeInfo {
+    float: left;
+    background-color: rgb(254, 182, 64);
+    margin: 8px 0% 0 5%;
+    height: 129px;
+    width: 42.5%;
+    color: #ffffff;
+    font-size: 19px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 6px 0px white;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffd65e), color-stop(100%, rgb(254, 182, 64)));
+}
+
+.homeInfoText {
+    display: block;
+    margin: 6% 0 0 0;
+    color: #ffffff;
+}
+
+.homeInfoAmount {
+    display: block;
+    margin: 17% 0 0 0;
+    font-size: 1.6em;
+}
+
+	
+	
+	
 
 }
