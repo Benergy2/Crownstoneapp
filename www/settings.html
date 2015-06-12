@@ -1,15 +1,22 @@
 <html>
 <head>
-    <link rel="stylesheet" href="css/stylesheet.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!--<link rel="stylesheet" href="css/stylesheet.css">-->
     <title>Instellingen</title>
-	<script type="text/javascript" src="js/etc.js"></script> 
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/etc.js"></script>
 </head>
 <body>
 <div class="topMenu">
     <span class="topMenuTitle">Benergy</span>
 
     <div class="logoutHolder">
-        <img src="img/logout-icon.png" class="logoutButton">
+        <img src="img/logout-icon2.png" class="logoutButton">
         <span class="linkTitle">Logout</span>
     </div>
 </div>
@@ -24,8 +31,8 @@
             <td><span class="bold">Prive</span></td>
             <td>
                 <div class="onoffswitch">
-                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                    <label class="onoffswitch-label" for="myonoffswitch">
+                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="privateSwitch" checked>
+                    <label class="onoffswitch-label" for="privateSwitch">
                         <span class="onoffswitch-inner"></span>
                         <span class="onoffswitch-switch"></span>
                     </label>
@@ -36,8 +43,8 @@
             <td><span class="bold">Apparaten</span></td>
             <td>
                 <div class="onoffswitch">
-                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" checked>
-                    <label class="onoffswitch-label" for="myonoffswitch">
+                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="deviceSwitch" checked>
+                    <label class="onoffswitch-label" for="deviceSwitch">
                         <span class="onoffswitch-inner"></span>
                         <span class="onoffswitch-switch"></span>
                     </label>
@@ -48,8 +55,8 @@
             <td><span class="bold">Groups</span></td>
             <td>
                 <div class="onoffswitch">
-                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" checked>
-                    <label class="onoffswitch-label" for="myonoffswitch">
+                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="groupSwitch" checked>
+                    <label class="onoffswitch-label" for="groupSwitch">
                         <span class="onoffswitch-inner"></span>
                         <span class="onoffswitch-switch"></span>
                     </label>
@@ -58,8 +65,7 @@
         </tr>
         <tr class="spaceUnder">
 		
-            <td><span class="bold">Groepen</span></td>
-            <td><a href="Groups.html">></a></td>
+            <td class="toGroups"><a class="toGroups" href="groups.html">Ga naar groepen</a></td>
         </tr>
 
 
@@ -74,12 +80,12 @@
                 
 				<a href="home.html">
 				<img src="img/home-icon3.png">
-                <span class="linkTitle">huis</span></a>
+                <span class="linkTitle">Huis</span></a>
             </li>
             <li>
 			<a href="room.html">
                 <img src="img/person-icon3.png">
-                <span class="linkTitle">jouw kamer</span>
+                <span class="linkTitle">Jouw kamer</span>
             </li>
             <li>
 			<a href="settings.html">
