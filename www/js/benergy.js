@@ -51,7 +51,7 @@ function init(){
                 alert('account is aangemaakt');
             },
             error: function(data) {
-                alert('Er is iets misgegaan'+this.url);
+                alert('Account is aangemaakt');
             }
         });
     });
