@@ -3,7 +3,7 @@
  */
 $('document').ready(init);
 function init(){
-
+/*
     // Login button
     $('.loginButton').on('click', function(){
         var username =  $(".text1").val();
@@ -17,12 +17,10 @@ function init(){
             success: function(data) {
                 alert('Uw bent nu ingelogd');
                 localStorage.setItem("user_id", data['id']);
-				window.location.assign("home.html")
-				
+				window.location.assign("home.html");
             },
             error: function(data) {
                 alert('Er is iets misgegaan');
-				
                 console.log(data);
             }
         });
@@ -31,6 +29,7 @@ function init(){
 
     // Register button
     $('.registerButton').on('click', function(){
+		
         var email =  $(".text1").val();
         var username =  $(".text2").val();
         var password =  $(".text3").val();
@@ -40,20 +39,25 @@ function init(){
         var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         for( var i=0; i < 4; i++ )
             key += possible.charAt(Math.floor(Math.random() * possible.length));
-
-        $.ajax({
-            type: 'GET',
-            url: 'http://rubendeman.nl/api/index.php',
-            contentType: 'application/json; charset=utf-8',
-            data: {action: "register", email: email, username: username, password: password, dorm: dorm,key: key},
-            dataType: 'json',
-            success: function(data) {
-                alert('account is aangemaakt');
-            },
-            error: function(data) {
-                alert('Account is aangemaakt');
-            }
-        });
+			
+		var loop = true;
+		if(loop){
+			loop = false;
+			$.ajax({
+				type: 'GET',
+				url: 'http://rubendeman.nl/api/index.php',
+				contentType: 'application/json; charset=utf-8',
+				data: {action: "register", email: email, username: username, password: password, dorm: dorm,key: key},
+				dataType: 'json',
+				success: function(data) {
+					alert('account is aangemaakt');
+					//window.location.assign("login.html");
+				},
+				error: function(data) {
+					alert('Er is helaas iets misgegaan'+this.url);
+				}
+			});
+		}
     });
 
     // lostPassword button
@@ -111,5 +115,5 @@ function init(){
 
     $('.logoutHolder').on("click", function(){
         window.location = "login.html";
-    })
+    })*/
 }

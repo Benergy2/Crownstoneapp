@@ -40,7 +40,6 @@ function register(){
         header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
         die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
 	}
-	
 	$sql = "INSERT INTO  `rubendem-4`.`Account` (`Account_id` ,`Role_Role_Id` ,`Account_username` ,`Account_password` ,`Account_email` ,`Account_verify` ,`Account_key`,`Dorm_Dorm_id`)VALUES (NULL ,  '2',  '$username', MD5(  '$password' ) ,  '$email',  'false',  '$key','$dorm');";
 	
 	if(mysql_query($sql)){
