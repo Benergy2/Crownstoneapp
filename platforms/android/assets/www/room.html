@@ -1,6 +1,15 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" href="css/stylesheet.css">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!--<link rel="stylesheet" href="css/stylesheet.css">-->
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/etc.js"></script>
     <title>Kamer</title>
 </head>
 <body>
@@ -8,12 +17,16 @@
     <span class="topMenuTitle">Benergy</span>
 
     <div class="logoutHolder">
-        <img src="img/logout-icon.png" class="logoutButton">
+        <img src="img/logout-icon2.png" class="logoutButton">
         <span class="linkTitle">Logout</span>
     </div>
 </div>
-<div id="FirstBlock"><img src="http://placehold.it/350x350"></div>
+
+<img class="coverImage" src="img/beer-background.jpg">
+
+<!--<div id="FirstBlock"><img style="zoom: 0.20" src="img/beer-icon.png"></div>-->
 <h1 class="Title">Mijn kamer</h1>
+
 <div class="InfoContainer">
     <table class="InfoTable">
         <tr class="spaceUnder">
@@ -22,21 +35,24 @@
         </tr>
         <tr class="spaceUnder">
             <td><span class="bold">Totale energie</span></td>
-            <td>1000 KW</td>
+            <td>375 KW</td>
         </tr>
         <tr class="spaceUnder">
             <td><span class="bold">Verschil vorige maand</span></td>
-            <td>10 KW</td>
+            <td>25 KW</td>
         </tr>
         <tr class="spaceUnder">
             <td><span class="bold">Totale prijs</span></td>
-            <td>&#8364; 70</td>
+            <td>&#8364; 51</td>
         </tr>
         <tr>
             <td><span class="bold">Prijs vorige maand</span></td>
             <td>&#8364; 55</td>
         </tr>
-
+        <tr>
+            <td><span class="bold">Biertjes gered</span></td>
+            <td><img class="ownBeerAmount" src="img/beer-icon2.gif">4x</td>
+        </tr>
 
     </table>
 </div>
@@ -46,12 +62,12 @@
                 
 				<a href="home.html">
 				<img src="img/home-icon3.png">
-                <span class="linkTitle">huis</span></a>
+                <span class="linkTitle">Huis</span></a>
             </li>
             <li>
 			<a href="room.html">
                 <img src="img/person-icon3.png">
-                <span class="linkTitle">jouw kamer</span>
+                <span class="linkTitle">Jouw kamer</span>
             </li>
             <li>
 			<a href="settings.html">

@@ -109,4 +109,7 @@ function init(){
 
     });
 
+    $('.logoutHolder').on("click", function(){
+        window.location = "login.html";
+    })
 }
