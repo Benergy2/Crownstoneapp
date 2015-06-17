@@ -1,6 +1,12 @@
 <?php
 include('connection.php');
 
+header('Content-Type', 'application/json');
+header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+		
+$response_array = array();
+
 $action = $_GET['action'];
 
 switch($action){
@@ -31,53 +37,39 @@ function register(){
 	
 	$sql = "SELECT * FROM  `Account` WHERE `Account_email` = '$email'";
 	$query = mysql_query($sql);
+	
 	$rows = mysql_fetch_array($query);
 	
 	if($rows > 0){
-		header('HTTP/1.1 500 Internal Server Booboo');
-        header('Content-Type: application/json; charset=UTF-8');
-        header('Access-Control-Allow-Origin: *');
-        header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-        die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
+		$response_array['success'] = false;
 	}
+	
 	$sql = "INSERT INTO  `rubendem-4`.`Account` (`Account_id` ,`Role_Role_Id` ,`Account_username` ,`Account_password` ,`Account_email` ,`Account_verify` ,`Account_key`,`Dorm_Dorm_id`)VALUES (NULL ,  '2',  '$username', MD5(  '$password' ) ,  '$email',  'false',  '$key','$dorm');";
 	
 	if(mysql_query($sql)){
-		$response_array['status'] = 'success';
-		header('content-type: application/json;');
-        header('Access-Control-Allow-Origin: *');
-        header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-        print json_encode($response_array);
+		$response_array['success'] = true;
 	}else{
-		header('HTTP/1.1 500 Internal Server Booboo');
-        header('Content-Type: application/json; charset=UTF-8');
-        header('Access-Control-Allow-Origin: *');
-        header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-        die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
+		$response_array['success'] = false;
 	}
+	
+	echo json_encode($response_array);
 }
 
 function login(){
 	$username = $_GET['username'];
 	$password = $_GET['password'];
+	
 	$sql = "SELECT * FROM  `Account` WHERE `Account_username` = '$username'";
 	$query = mysql_query($sql);
 	$rows = mysql_fetch_array($query);
 	
 	if($rows['Account_password'] == md5($password) && $rows['Account_verify'] == "true" ){
-		$response_array['status'] = 'success';
-		$response_array['id'] = $rows['Account_id'];
-		header('content-type: application/json;');
-        header('Access-Control-Allow-Origin: *');
-        header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-        print json_encode($response_array);
+		$response_array['success'] = true;
 	}else{
-		header('HTTP/1.1 500 Internal Server Booboo');
-        header('Content-Type: application/json; charset=UTF-8');
-        header('Access-Control-Allow-Origin: *');
-        header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-        die(json_encode(array('message' => 'ERROR', 'code' => 1337)));	
+		$response_array['success'] = false;	
 	}
+	
+	echo json_encode($response_array);
 }
 
 function lostPasswordEmail(){
@@ -106,18 +98,12 @@ function lostPasswordEmail(){
 	$send = mail($to, $subject, $message, $headers);
 	
 	if($send){
-		$response_array['status'] = 'success';
-		header('content-type: application/json;');
-        header('Access-Control-Allow-Origin: *');
-        header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-        print json_encode($response_array);
+		$response_array['success'] = true;
 	}else{
-		header('HTTP/1.1 500 Internal Server Booboo');
-        header('Content-Type: application/json; charset=UTF-8');
-        header('Access-Control-Allow-Origin: *');
-        header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-        die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
+		$response_array['success'] = false;
 	}
+	
+	echo json_encode($response_array);
 }
 
 function passwordReset(){
@@ -125,32 +111,23 @@ function passwordReset(){
 	$code = $_GET['code'];
 	$new_password = $_GET['new_password'];
 	$sql = "SELECT * FROM  `Account` WHERE `Account_email` = '$email' AND `Account_key` = '$code'";
+	
 	$query = mysql_query($sql);
 	$rows = mysql_num_rows($query);
 	
 	if($rows > 0){
 		$sql = "UPDATE  `rubendem-4`.`Account` SET  `Account_password` = MD5(  '$new_password' ) WHERE  `Account`.`Account_email` = '$email';";
 		if(mysql_query($sql)){
-			$response_array['status'] = 'success';
+			$response_array['success'] = true;
 			$response_array['id'] = $rows['Account_id'];
-			header('content-type: application/json;');
-			header('Access-Control-Allow-Origin: *');
-			header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-			print json_encode($response_array);
 		}else{
-		header('HTTP/1.1 500 Internal Server Booboo');
-        header('Content-Type: application/json; charset=UTF-8');
-        header('Access-Control-Allow-Origin: *');
-        header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-        die(json_encode(array('message' => 'ERROR', 'code' => 1337)));	
+			$response_array['success'] = false;
 		}
 	}else{
-		header('HTTP/1.1 500 Internal Server Booboo');
-        header('Content-Type: application/json; charset=UTF-8');
-        header('Access-Control-Allow-Origin: *');
-        header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-        die(json_encode(array('message' => 'ERROR', 'code' => 1337)));	
+		$response_array['success'] = false;
 	}
+	
+	echo json_encode($response_array);
 }
 
 ?>
