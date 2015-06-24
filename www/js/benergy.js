@@ -4,6 +4,31 @@
 $('document').ready(init);
 function init(){
 
+
+        $.ajax({
+            type: 'GET',
+            url: 'http://rubendeman.nl/api/index.php',
+            contentType: 'application/json; charset=utf-8',
+            data: {action: "getCity" },
+            dataType: 'json',
+            success: function(response) {
+                if (response.success) {
+                    // It was true
+                    console.log(response.dorms);
+                    for (var i = 0; i < response.dorms.length; i++) {
+                        $('.select1').append($("<option></option>").attr("value",(i+1)).text(response.dorms[i])); 
+                    }
+                }
+                else {
+                    // It was false
+                    alert('Er is helaas iets misgegaan'+this.url);
+                }
+            },
+            error: function(data) {
+            }
+        });
+
+
     // Login button
     $('.loginButton').on('click', function(){
 

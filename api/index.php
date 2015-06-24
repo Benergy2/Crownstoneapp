@@ -25,6 +25,21 @@ switch($action){
 	case "lostPassword2":
 		passwordReset();
 	break;
+	case "getCity":
+		getCity();
+	break;
+}
+
+function getCity(){
+	$sql = "SELECT DISTINCT Dorm_Name FROM `Dorm` ";
+	$query = mysql_query($sql);
+	$city_array =  array();
+	while ($row = mysql_fetch_array($query)){
+		$response_array['success'] = true;
+		array_push($city_array, $row['Dorm_Name']);
+	}
+	$response_array['dorms'] = $city_array;
+	echo json_encode($response_array);
 }
 
 function register(){

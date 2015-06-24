@@ -1,59 +1,82 @@
+<!DOCTYPE html>
 <html>
-	<head>
-    <link rel="stylesheet" href="css/stylesheet.css">
-	 <title>Kamer</title>
-	</head>
-	<body>
- <div class="topMenu">
-        <span class="topMenuTitle">Benergy</span>
-        <div class="logoutHolder">
-            <img src="img/logout-icon.png" class="logoutButton">
-            <span class="linkTitle">Logout</span>
-        </div>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!--<link rel="stylesheet" href="css/stylesheet.css">-->
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/etc.js"></script>
+    <title>Kamer</title>
+</head>
+<body>
+<div class="topMenu">
+    <span class="topMenuTitle">Benergy</span>
+
+    <div class="logoutHolder">
+        <img src="img/logout-icon2.png" class="logoutButton">
+        <span class="linkTitle">Logout</span>
     </div>
-	<div id="FirstBlock"><img src="http://placehold.it/350x350"></img></div>
+</div>
+
+<img class="coverImage" src="img/beer-background.jpg">
+
+<!--<div id="FirstBlock"><img style="zoom: 0.20" src="img/beer-icon.png"></div>-->
+<h1 class="Title">Mijn kamer</h1>
 
 <div class="InfoContainer">
-<table class="InfoTable">
-  <tr>
-    <td>Totale Crownstones</td>
-    <td>10</td>
-  </tr>
-  <tr>
-    <td>Totale Energie</td>
-    <td>1000 KW</td>
-  </tr>
-  <tr>
-    <td>Verschil vorige maand</td>
-    <td>10 KW</td>
-  </tr>
-  <tr>
-    <td>Totale prijs</td>
-    <td>&#8364; 70</td>
-  </tr>
-    <tr>
-    <td>Prijs vorige maand</td>
-    <td>&#8364; 55</td>
-  </tr>
-  
-  
-</table>
+    <table class="InfoTable">
+        <tr class="spaceUnder">
+            <td><span class="bold">Aangesloten apparaten</span></td>
+            <td>10</td>
+        </tr>
+        <tr class="spaceUnder">
+            <td><span class="bold">Totale energie</span></td>
+            <td>375 KW</td>
+        </tr>
+        <tr class="spaceUnder">
+            <td><span class="bold">Verschil vorige maand</span></td>
+            <td>25 KW</td>
+        </tr>
+        <tr class="spaceUnder">
+            <td><span class="bold">Totale prijs</span></td>
+            <td>&#8364; 51</td>
+        </tr>
+        <tr>
+            <td><span class="bold">Prijs vorige maand</span></td>
+            <td>&#8364; 55</td>
+        </tr>
+        <tr>
+            <td><span class="bold">Biertjes gered</span></td>
+            <td><img class="ownBeerAmount" src="img/beer-icon2.gif">4x</td>
+        </tr>
+
+    </table>
 </div>
     <div class="bottomMenu">
         <ul>
             <li>
-                <img src="img/home-icon2.png">
-                <span class="linkTitle">Home</span>
+                
+				<a href="home.html">
+				<img src="img/home-icon3.png">
+                <span class="linkTitle">Huis</span></a>
             </li>
             <li>
-                <img src="img/person-icon2.png">
-                <span class="linkTitle">Your room</span>
+			<a href="room.html">
+                <img src="img/person-icon3.png">
+                <span class="linkTitle">Jouw kamer</span>
             </li>
             <li>
-                <img src="img/option-icon2.png">
-                <span class="linkTitle">Settings</span>
+			<a href="settings.html">
+                <img src="img/option-icon3.png">
+                <span class="linkTitle">Instellingen</span>
+				</a>
             </li>
         </ul>
     </div>
-	
-	</html>
+
+</body>
+</html>
