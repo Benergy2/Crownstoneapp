@@ -264,7 +264,6 @@ D:\Users\Cristiaan\Documents\GitHub\Crownstoneapp\platforms\android\assets\www\f
 D:\Users\Cristiaan\Documents\GitHub\Crownstoneapp\platforms\android\assets\www\img\beer-background.jpg \
 D:\Users\Cristiaan\Documents\GitHub\Crownstoneapp\platforms\android\assets\www\img\beer-icon.png \
 D:\Users\Cristiaan\Documents\GitHub\Crownstoneapp\platforms\android\assets\www\img\beer-icon2.gif \
-D:\Users\Cristiaan\Documents\GitHub\Crownstoneapp\platforms\android\assets\www\img\bill-icon.png \
 D:\Users\Cristiaan\Documents\GitHub\Crownstoneapp\platforms\android\assets\www\img\crownstone.jpg \
 D:\Users\Cristiaan\Documents\GitHub\Crownstoneapp\platforms\android\assets\www\img\crownstone.png \
 D:\Users\Cristiaan\Documents\GitHub\Crownstoneapp\platforms\android\assets\www\img\crownstone_assembled.jpg \
