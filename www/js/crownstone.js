@@ -1,3 +1,5 @@
+console.log("starting crownstone js");
+
 Object.size = function(obj) {
     var size = 0, key;
     for (key in obj) {
@@ -8,33 +10,34 @@ Object.size = function(obj) {
 
 // First, checks if it isn't implemented yet.
 if (!String.prototype.format) {
-  String.prototype.format = function() {
-    var args = arguments;
-    return this.replace(/{(\d+)}/g, function(match, number) { 
-      return typeof args[number] != 'undefined'
-        ? args[number]
-        : match
-      ;
-    });
-  };
+    String.prototype.format = function() {
+        var args = arguments;
+        return this.replace(/{(\d+)}/g, function(match, number) {
+            return typeof args[number] != 'undefined'
+                ? args[number]
+                : match
+                ;
+        });
+    };
 }
 
 var ble;
 
 var crownstone = {
 
-	// array with info of partners (and ourselves), like address, logo, description, etc.
-	partnersById: {},
+    // array with info of partners (and ourselves), like address, logo, description, etc.
+    partnersById: {},
 
-	// map of crownstones 
-	crownstones: {},
+    // map of crownstones
+    crownstones: {},
 
-	// structure to callect crownstones in a building (per floor)
-	building: {},
+    // structure to callect crownstones in a building (per floor)
+    building: {},
 
-	/* Start should be called if all plugins are ready and all functionality can be called.
-	 */
-	start:function() {
+    /* Start should be called if all plugins are ready and all functionality can be called.
+     */
+    start:function() {
+        console.log("starting crownstone: start function");
 		// set up bluetooth connection
 		ble.init(function(enabled) {
 			$('#findCrownstones').prop("disabled", !enabled);
@@ -44,6 +47,7 @@ var crownstone = {
 	},
 
 	create:function() {
+        console.log("creating crownstone");
 		var self = this;
 	
 		console.log("---------------------------------------------------------");
@@ -118,22 +122,22 @@ var crownstone = {
 		 	//$.mobile.changePage("#selectionPage", {transition:'slide', hashChange:true});
 		}
 		
-		$("#selectionPage").on("pagecreate", function(event) {
-			// get partner information
-			console.log("Get partner information");
-			$.getJSON('data/partners.js', function(partners) {
-				console.log("Update data structure with partner information");
-
-				for (var c = 0; c < partners.length; c++) {
-					var partner = partners[c];
-					self.partnersById[partner.id] = partner;
-				}
-			}).error(function() {
-				console.log("Did you make an error in the data/partners.js file?");
-			}).success(function() {
-				console.log("Retrieved data structure successfully");
-			});
-		});
+		//$("#selectionPage").on("pagecreate", function(event) {
+		//	// get partner information
+		//	console.log("Get partner information");
+		//	$.getJSON('data/partners.js', function(partners) {
+		//		console.log("Update data structure with partner information");
+        //
+		//		for (var c = 0; c < partners.length; c++) {
+		//			var partner = partners[c];
+		//			self.partnersById[partner.id] = partner;
+		//		}
+		//	}).error(function() {
+		//		console.log("Did you make an error in the data/partners.js file?");
+		//	}).success(function() {
+		//		console.log("Retrieved data structure successfully");
+		//	});
+		//});
 
 		searchCrownstones = function() {
 			if (searching) {
@@ -229,9 +233,9 @@ var crownstone = {
 			// $('#pwm').on('slidestop focusout', function() {
 			// 	setPWM($(this).val());
 			// });
-			$('#setPWM').on('click', function(event) {
-				setPWM($('#pwm').val());
-			});
+			//$('#setPWM').on('click', function(event) {
+			//	setPWM($('#pwm').val());
+			//});
 
 			$('#powerON').on('click', function(event) {
 				powerON();
@@ -243,78 +247,78 @@ var crownstone = {
 				$('#pwm').val(0).slider('refresh');
 			});
 
-			$('#repeatPowerOnOff').on('click', function(event) {
-				console.log("Stop scan if running");
-				if (repeatFunctionHandle) {
-					console.log("Clear repeat action");
-					clearInterval(repeatFunctionHandle);
-					repeatFunctionHandle = null;
-					$('#powerState').hide();
-					return;
-				}
-				console.log("Set repeat action");
+			//$('#repeatPowerOnOff').on('click', function(event) {
+			//	console.log("Stop scan if running");
+			//	if (repeatFunctionHandle) {
+			//		console.log("Clear repeat action");
+			//		clearInterval(repeatFunctionHandle);
+			//		repeatFunctionHandle = null;
+			//		$('#powerState').hide();
+			//		return;
+			//	}
+			//	console.log("Set repeat action");
+            //
+			//	togglePower(function() {
+			//		$('#powerState').show();
+			//		repeatFunctionHandle = setInterval(togglePower, 4000);
+			//	});
+			//});
+            //
+			//$('#getTemperature').on('click', function(event) {
+			//	readTemperature(function(temperature) {
+			//		$('#temperature').html("Temperature: " + temperature + " °C");
+			//		$('#temperature').show();
+			//	});
+			//});
 
-				togglePower(function() {
-					$('#powerState').show();
-					repeatFunctionHandle = setInterval(togglePower, 4000);
-				});
-			});	
-
-			$('#getTemperature').on('click', function(event) {
-				readTemperature(function(temperature) {
-					$('#temperature').html("Temperature: " + temperature + " °C");
-					$('#temperature').show();
-				});
-			});
-
-			$('#scanDevices').on('click', function(event) {
-				// $(this).prop("disabled", true);
-				startDeviceScan(function() {
-					setTimeout(stopDeviceScan, 10000);
-					setTimeout(getDeviceList, 11000);
-				});
-				// $(this).progressbar("option", "value", false);
-			});
-
-			$('#setDeviceName').on('click', function(event) {
-				setDeviceName($('#deviceName').val());
-			});
-
-			$('#getDeviceName').on('click', function(event) {
-				getDeviceName(function(deviceName) {
-					$('#deviceName').val(deviceName);
-				});
-			});
-
-			$('#setDeviceType').on('click', function(event) {
-				setDeviceType($('#deviceType').val());
-			});
-
-			$('#getDeviceType').on('click', function(event) {
-				getDeviceType(function(deviceType) {
-					$('#deviceType').val(deviceType);
-				});
-			});
-
-			$('#setRoom').on('click', function(event) {
-				setRoom($('#room').val());
-			});
-
-			$('#getRoom').on('click', function(event) {
-				getRoom(function(room) {
-					$('#room').val(room);
-				});
-			});
-
-			$('#setCurrentLimit').on('click', function(event) {
-				setCurrentLimit($('#currentLimit').val());
-			});
-
-			$('#getCurrentLimit').on('click', function(event) {
-				getCurrentLimit(function(currentLimit) {
-					$('#currentLimit').val(currentLimit);
-				});
-			});
+			//$('#scanDevices').on('click', function(event) {
+			//	// $(this).prop("disabled", true);
+			//	startDeviceScan(function() {
+			//		setTimeout(stopDeviceScan, 10000);
+			//		setTimeout(getDeviceList, 11000);
+			//	});
+			//	// $(this).progressbar("option", "value", false);
+			//});
+            //
+			//$('#setDeviceName').on('click', function(event) {
+			//	setDeviceName($('#deviceName').val());
+			//});
+            //
+			//$('#getDeviceName').on('click', function(event) {
+			//	getDeviceName(function(deviceName) {
+			//		$('#deviceName').val(deviceName);
+			//	});
+			//});
+            //
+			//$('#setDeviceType').on('click', function(event) {
+			//	setDeviceType($('#deviceType').val());
+			//});
+            //
+			//$('#getDeviceType').on('click', function(event) {
+			//	getDeviceType(function(deviceType) {
+			//		$('#deviceType').val(deviceType);
+			//	});
+			//});
+            //
+			//$('#setRoom').on('click', function(event) {
+			//	setRoom($('#room').val());
+			//});
+            //
+			//$('#getRoom').on('click', function(event) {
+			//	getRoom(function(room) {
+			//		$('#room').val(room);
+			//	});
+			//});
+            //
+			//$('#setCurrentLimit').on('click', function(event) {
+			//	setCurrentLimit($('#currentLimit').val());
+			//});
+            //
+			//$('#getCurrentLimit').on('click', function(event) {
+			//	getCurrentLimit(function(currentLimit) {
+			//		$('#currentLimit').val(currentLimit);
+			//	});
+			//});
 
 			$('#sampleCurrentCurve').on('click', function(event) {
 				sampleCurrentCurve(function(success) {
@@ -996,42 +1000,42 @@ var crownstone = {
 		 *
 		 * Shows information about company.
 		 */
-		$('#aboutPage').on("pagecreate", function() {
-			var partnerId = "dobots";
-			console.log('Show partner ' + partnerId);
-			var partner = self.partnersById[partnerId];
-			if (partner) {
-				if (partner.logo) {
-					$('#allPartnerLogo').attr('src', 'img/logos/' + partner.logo);
-				}
-				if (partner.name) {
-					$('#allPartnersDetailsPage .ui-title').text(partner.name);
-				}
-				if (partner.description) {
-					$('#allPartnerDescription').text(partner.description);
-				}
-				if (partner.address) {
-					$('#allPartnerAddress').text(partner.address);
-				}
-				if (partner.tel) {
-					var spaceless_tel = partner.tel.replace(/\s+/g, '');
-					var clickable_tel = '<a href="tel:' + spaceless_tel + '">tel: ' + 
-						partner.tel + '</a>';
-					$('#allPartnerTel').html(clickable_tel);
-				}
-				if (partner.website) {
-					$('#allPartnerWebsite').html('<a href="' + partner.website + '">' +
-						partner.website + '</a>');
-				}
-				if (partner.email) {
-					$('#allPartnerEmail').html('<a href="mailto:' + partner.email + 
-						'?Subject=Memo">' +
-						partner.email + '</a>');
-				}
-			} else {
-				console.error('Could not select ' + partnerId);
-			}
-		});
+		//$('#aboutPage').on("pagecreate", function() {
+		//	var partnerId = "dobots";
+		//	console.log('Show partner ' + partnerId);
+		//	var partner = self.partnersById[partnerId];
+		//	if (partner) {
+		//		if (partner.logo) {
+		//			$('#allPartnerLogo').attr('src', 'img/logos/' + partner.logo);
+		//		}
+		//		if (partner.name) {
+		//			$('#allPartnersDetailsPage .ui-title').text(partner.name);
+		//		}
+		//		if (partner.description) {
+		//			$('#allPartnerDescription').text(partner.description);
+		//		}
+		//		if (partner.address) {
+		//			$('#allPartnerAddress').text(partner.address);
+		//		}
+		//		if (partner.tel) {
+		//			var spaceless_tel = partner.tel.replace(/\s+/g, '');
+		//			var clickable_tel = '<a href="tel:' + spaceless_tel + '">tel: ' +
+		//				partner.tel + '</a>';
+		//			$('#allPartnerTel').html(clickable_tel);
+		//		}
+		//		if (partner.website) {
+		//			$('#allPartnerWebsite').html('<a href="' + partner.website + '">' +
+		//				partner.website + '</a>');
+		//		}
+		//		if (partner.email) {
+		//			$('#allPartnerEmail').html('<a href="mailto:' + partner.email +
+		//				'?Subject=Memo">' +
+		//				partner.email + '</a>');
+		//		}
+		//	} else {
+		//		console.error('Could not select ' + partnerId);
+		//	}
+		//});
 
 		/*******************************************************************************************************
 		 * Create indoor localization page
