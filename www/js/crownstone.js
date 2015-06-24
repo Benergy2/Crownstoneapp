@@ -1368,4 +1368,5 @@ var crownstone = {
 		start();	
 	}
 };
+crownstone.start();
 
