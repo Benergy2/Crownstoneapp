@@ -1,33 +1,80 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        
-		<link rel="stylesheet" href="css/index.css">
-        <title>Benergy</title>
-    </head>
-    <body>
-        <div id="container">
-            <div class="titleHolderIndex">
-                <h1 class="title">Benergy</h1>
-            </div>
-            <a class="buttonStyle indexButton" href="login.html">Aanmelden</a>
-            <!--<a class="buttonStyle indexButton" href="">Info</a>-->
+<head>
+    <!--
+    Customize this policy to fit your own app's needs. For more guidance, see:
+        https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+    Some notes:
+        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+            * Enable inline JS: add 'unsafe-inline' to default-src
+    -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.2.min.js"></script>
+    <script src="js/jquery.flot.js"></script>
+    <title>Benergy</title>
+</head>
+<body>
+<div id="container">
+    <div class="titleHolderIndex">
+        <h1 class="title">Benergy</h1>
+    </div>
+    <a class="buttonStyle indexButton" href="login.html">Aanmelden</a>
+    <!--<a class="buttonStyle indexButton" href="">Info</a>-->
+    <div data-role="page" id="selectionPage">
+        <div data-role="header" data-position='fixed'>
+            <h1 class="ui-title" role="heading" aria-level="1">Crownstone</h1>
         </div>
 
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
+        <div class="scrollable" role="main">
+            <div>
+                <button id="findCrownstones" class="ui-btn-active ui-state-persist" data-role="button" disabled>Find
+                    Crownstones
+                </button>
+                <table id="crownStoneTable" style="display: none; width: 100%"></table>
+                <div id="closestCrownstone">Closest Crownstone:</div>
+            </div>
+            <div data-role="page" id="controlPage">
+                <div data-role="header" data-position='fixed'>
+                    <h1 id="crownstoneTitle" class="ui-title" role="heading" aria-level="1">Crownstone</h1>
+                </div>
+                <table width="100%">
+                    <tr>
+                        <td>
+                            <button id="powerON" class="ui-btn-active ui-state-persist" data-role="button">Power ON
+                            </button>
+                        </td>
+                        <td>
+                            <button id="powerOFF" class="ui-btn-active ui-state-persist" data-role="button">Power OFF
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div data-role="panel" class="sideMenu" data-display="reveal" data-theme="b">
+            <div id="statusBarFill"></div>
+            <ul data-role="listview">
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/ble.js"></script>
+<script type="text/javascript" src="js/crownstone.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript">
+			app.initialize();
+		</script>
+</body>
 </html>
