@@ -24,7 +24,7 @@ var app = {
 		//the following might be necessary for iOS
 		//window.localStorage.clear(); 
 		this.bindEvents();
-
+        console.log("creating crownstone");
 		crownstone.create();
 	},
 	// Bind Event Listeners
@@ -52,3 +52,5 @@ var app = {
 
 	}
 };
+
+app.initialize();
