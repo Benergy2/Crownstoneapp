@@ -92,9 +92,9 @@ var crownstone = {
 			//});
 		
 			// add menu options to side menu that opens up at swiping
-			$('.sideMenu ul').append('<li><a href="#selectionPage">Overview</a></li>');
-			$('.sideMenu ul').append('<li><a href="#indoorLocalizationPage">Localization</a></li>');
-			$('.sideMenu ul').append('<li><a href="#aboutPage">About</a></li>');
+			//$('.sideMenu ul').append('<li><a href="#selectionPage">Overview</a></li>');
+			//$('.sideMenu ul').append('<li><a href="#indoorLocalizationPage">Localization</a></li>');
+			//$('.sideMenu ul').append('<li><a href="#aboutPage">About</a></li>');
 			
 			// add swipe gesture to all pages with a panel
 			console.log("Add swipe gesture to all pages with side panel");
@@ -120,7 +120,7 @@ var crownstone = {
 				searchCrownstones();
 			});
 		 	//$.mobile.changePage("#selectionPage", {transition:'slide', hashChange:true});
-		}
+		};
 		
 		//$("#selectionPage").on("pagecreate", function(event) {
 		//	// get partner information
@@ -595,8 +595,10 @@ var crownstone = {
 		powerON = function(callback, cargs) {
 			if (!connectedDevice) {
 				console.log("no connected device address!!");
+                start();
 				return;
 			}
+
 
 			console.log("switch power ON");
 			$('#powerState').html("LED: ON");
@@ -628,7 +630,7 @@ var crownstone = {
 			} else {
 				powerON(callback, cargs);
 			}
-		}
+		};
 
 		startDeviceScan = function(callback, cargs) {
 			if (!connectedDevice) {
@@ -642,7 +644,7 @@ var crownstone = {
 			if (callback) {
 				callback(cargs);
 			}
-		}
+		};
 
 		stopDeviceScan = function(callback) {
 			if (!connectedDevice) {
@@ -652,7 +654,7 @@ var crownstone = {
 
 			console.log("Stop Scan");
 			ble.scanDevices(connectedDevice, false);
-		}
+		};
 
 		getDeviceList = function() {
 			if (!connectedDevice) {
@@ -707,12 +709,12 @@ var crownstone = {
 
 					$(document).on("click", "#deviceTable tr", function(e) {
 						cordova.plugins.clipboard.copy(this.id);
-					})
+					});
 
 					$('#scanDevices').prop("disabled", false);
 				}
 			});
-		}
+		};
 
 		readTemperature = function(callback) {
 			if (!connectedDevice) {
@@ -722,7 +724,7 @@ var crownstone = {
 
 			console.log("Reading temperature");
 			ble.readTemperature(connectedDevice, callback);
-		}
+		};
 
 		getCurrentConsumption = function(callback) {
 			if (!connectedDevice) {
@@ -732,7 +734,7 @@ var crownstone = {
 
 			console.log("Reading consumption");
 			ble.readCurrentConsumption(connectedDevice, callback);
-		}
+		};
 
 		getDeviceName = function(callback) {
 			if (!connectedDevice) {
@@ -742,7 +744,7 @@ var crownstone = {
 
 			console.log("Get device name");
 			ble.readDeviceName(connectedDevice, callback);
-		}
+		};
 
 		setDeviceName = function(deviceName, callback, cargs) {
 			if (!connectedDevice) {
@@ -755,7 +757,7 @@ var crownstone = {
 			if (callback) {
 				callback(cargs);
 			}
-		}
+		};
 
 		getDeviceType = function(callback) {
 			if (!connectedDevice) {
@@ -765,7 +767,7 @@ var crownstone = {
 
 			console.log("Get device type");
 			ble.readDeviceType(connectedDevice, callback);
-		}
+		};
 
 		setDeviceType = function(deviceType, callback, cargs) {
 			if (!connectedDevice) {
@@ -778,7 +780,7 @@ var crownstone = {
 			if (callback) {
 				callback(cargs);
 			}
-		}
+		};
 
 		getRoom = function(callback) {
 			if (!connectedDevice) {
@@ -788,7 +790,7 @@ var crownstone = {
 
 			console.log("Get room");
 			ble.readRoom(connectedDevice, callback);
-		}
+		};
 
 		setRoom = function(room, callback, cargs) {
 			if (!connectedDevice) {
@@ -801,7 +803,7 @@ var crownstone = {
 			if (callback) {
 				callback(cargs);
 			}
-		}
+		};
 
 		getCurrentLimit = function(callback) {
 			if (!connectedDevice) {
@@ -811,7 +813,7 @@ var crownstone = {
 
 			console.log("Get current limit");
 			ble.readCurrentLimit(connectedDevice, callback);
-		}
+		};
 
 		setCurrentLimit = function(currentLimit, callback, cargs) {
 			if (!connectedDevice) {
@@ -824,7 +826,7 @@ var crownstone = {
 			if (callback) {
 				callback(cargs);
 			}
-		}
+		};
 
 		var findTimer = null;
 
@@ -850,7 +852,7 @@ var crownstone = {
 					ble.startEndlessScan(callback);
 				}, timeout);
 			// }
-		}
+		};
 
 		stopSearch = function() {
 			console.log("stop search");
@@ -859,7 +861,7 @@ var crownstone = {
 			}
 			ble.stopEndlessScan();
 			$('#findCrownstones').html("Find Crownstones");
-		}
+		};
 
 		connect = function(address, timeout, successCB, errorCB) {
 			if (!(connected || connecting)) {
@@ -880,7 +882,7 @@ var crownstone = {
 
 				});
 			}
-		}
+		};
 
 		discoverServices = function(callback) {
 			if (!connectedDevice) {
@@ -891,7 +893,7 @@ var crownstone = {
 			console.log("discover services");
 			trigger = 0;
 			ble.discoverServices(connectedDevice, callback);
-		}
+		};
 
 		disconnect = function() {
 			if (!connectedDevice) {
@@ -905,7 +907,7 @@ var crownstone = {
 				ble.disconnectDevice(connectedDevice);
 				connectedDevice = null;
 			}
-		}
+		};
 
 		getTrackedDevices = function(callback) {
 			if (!connectedDevice) {
@@ -915,7 +917,7 @@ var crownstone = {
 
 			console.log("Get tracked devices");
 			ble.getTrackedDevices(connectedDevice, callback);
-		}
+		};
 
 		addTrackedDevice = function(address, rssi) {
 			if (!connectedDevice) {
@@ -946,7 +948,7 @@ var crownstone = {
 			}
 			console.log("Add tracked device");
 			ble.addTrackedDevice(connectedDevice, bt_address, rssi);
-		}
+		};
 
 		sampleCurrentConsumption = function(callback) {
 			if (!connectedDevice) {
@@ -956,7 +958,7 @@ var crownstone = {
 
 			console.log("Sample current consumption");
 			ble.sampleCurrent(connectedDevice, 0x01, callback);
-		}
+		};
 
 		sampleCurrentCurve = function(callback) {
 			if (!connectedDevice) {
@@ -966,7 +968,7 @@ var crownstone = {
 
 			console.log("Sample current curve");
 			ble.sampleCurrent(connectedDevice, 0x02, callback);
-		}
+		};
 
 		getCurrentCurve = function(callback) {
 			if (!connectedDevice) {
@@ -976,7 +978,7 @@ var crownstone = {
 
 			console.log("Get current curve");
 			ble.getCurrentCurve(connectedDevice, callback);
-		}
+		};
 
 		/* Getting a floor in the configuration characteristic
 		 *
@@ -990,7 +992,7 @@ var crownstone = {
 				console.log("Get floor level");
 				ble.getFloor(connectedDevice, callback, errorCB);
 			}
-		}
+		};
 
 		/*******************************************************************************************************
 		 * Create about page
@@ -1140,7 +1142,7 @@ var crownstone = {
 				}
 			}
 			return max_level;
-		}
+		};
 
 		updateTable = function(floor, device) {
 			var jqueryID = '#buildingField' + floor;
@@ -1150,7 +1152,7 @@ var crownstone = {
 			} else {
 				$(jqueryID).text('unknown device ' + txt);
 			}
-		}
+		};
 
 		updateTableActivity = function() {
 			//var select_level = mostCrownstones();
@@ -1168,7 +1170,7 @@ var crownstone = {
 			var jQueryID = '#buildingRow' + select_level;
 			var elem = $(jQueryID);
 			elem.addClass('activeRow');
-		}
+		};
 
 		startLocalizing = function() {
 			localizing = true;
@@ -1188,7 +1190,7 @@ var crownstone = {
 					updateTableActivity();
 				}
 			});
-		}
+		};
 
 		closestLevel = function() {
 			var highest_rssi = -1000;
@@ -1203,7 +1205,7 @@ var crownstone = {
 				}
 			}
 			return level;
-		}
+		};
 
 		updateRSSI = function(obj) {
 			var level = getLevel(obj);
@@ -1215,7 +1217,7 @@ var crownstone = {
 			for (var i = 0; i < f.devices.length; i++) {
 				f.devices[i].rssi = obj.rssi;
 			}
-		}
+		};
 
 		/* Return the average RSSI value of a floor.
 		 *
@@ -1245,7 +1247,7 @@ var crownstone = {
 			}
 			console.log("Averages floor RSSI [" + str + "]");
 			
-		}
+		};
 
 		getLevel = function(device) {
 			for (var fl in self.building.floors) {
@@ -1258,13 +1260,13 @@ var crownstone = {
 				}
 			}
 			return null;
-		}
+		};
 
 		stopLocalizing = function() {
 			$('#localizeBtn').text('Start localizing');
 			stopSearch();
 			localizing = false;
-		}
+		};
 
 		startFloorSearching = function() {
 			floorsearching = true;
@@ -1299,7 +1301,7 @@ var crownstone = {
 					updateCrownstone(obj);
 				}
 			});
-		}
+		};
 
 		/** Connect and discover 
 		 *
@@ -1335,34 +1337,35 @@ var crownstone = {
 					 generalErrorCB(msg);
 				}
 			);
-		}
+		};
 
 		generalErrorCB = function(msg) {
 			console.log(msg);
-		}
+		};
 
 		stopFloorSearching = function() {
 			// stop scanning
 			stopSearch();
 			floorsearching = false;
 			$('#searchFloorBtn').text('Start to search');
-		}
+		};
 
 		existCrownstone = function(device) {
 			return (self.crownstones.hasOwnProperty(device.address));
-		}
+		};
 
 		addCrownstone = function(device) {
 			console.log("Add crownstone: " + device.address);
 			self.crownstones[device.address] = {'name': device.name, 'rssi': device.rssi};
-		}
+		};
 
 		updateCrownstone = function(device) {
 			self.crownstones[device.address]['rssi'] = device.rssi;
-		}
+		};
 
 		// start
+        console.log("starting crownstone");
 		start();	
 	}
-}
+};
 
