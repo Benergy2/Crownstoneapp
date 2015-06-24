@@ -59,10 +59,21 @@ function register(){
 		$response_array['success'] = false;
 	}
 	
-	$sql = "INSERT INTO  `rubendem-4`.`Account` (`Account_id` ,`Role_Role_Id` ,`Account_username` ,`Account_password` ,`Account_email` ,`Account_verify` ,`Account_key`,`Dorm_Dorm_id`)VALUES (NULL ,  '2',  '$username', MD5(  '$password' ) ,  '$email',  'false',  '$key','$dorm');";
+	$sql = "INSERT INTO  `rubendem-4`.`Account` (`Account_id` ,`Role_Role_Id` ,`Account_username` ,`Account_password` ,`Account_email` ,`Account_verify` ,`Account_key`,`Dorm_Dorm_id`)VALUES (NULL ,  '2',  '$username', MD5(  '$password' ) ,  '$email',  'true',  '$key','$dorm');";
 	
 	if(mysql_query($sql)){
-		$response_array['success'] = true;
+		
+		
+		$sql = "SELECT * FROM `rubendem-4`.`Account` WHERE `Account_username` = '$username'";
+		$query = mysql_query($sql);
+		$rows = mysql_num_rows($query);
+		if($rows == 2){
+			$row = mysql_fetch_array($query);
+			$sql = "INSERT INTO  `rubendem-4`.`Room` (`Room_id` ,`Dorm_Dorm_id` ,`Account_Account_id` ,`public`)VALUES (NULL ,  '$dorm',  '".$row['Account_id']."', 'true');";
+			if(mysql_query($sql)){
+				$response_array['success'] = true;
+			}
+		}
 	}else{
 		$response_array['success'] = false;
 	}
